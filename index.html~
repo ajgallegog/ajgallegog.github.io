@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+
+
+<div class="container">
+      <section id="main_content">
+        <h3>
+<a id="profile" class="anchor" href="#profile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Profile</h3>
+
+<p>I am an Electronic Engineer, and currently I am working in computer architecture modelling. Some of my work includes Embedded systems, Softcores and full-system simulators, programmed in languages like C, python, Verilog, VHDL, Assembler and some others related.</p>
+
+<h3>
+<a id="software-and-tools" class="anchor" href="#software-and-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software and tools</h3>
+
+<ul>
+<li>Lattice Mico 32 Softcore embedded in Nexys FPGAs using linux OS, ISE Webpack from Xilinx, and its own set of cross-compilers to generate SOftware tasks.</li>
+<li>ARMv7 architecture modelling using gem5 (<a href="http://www.gem5.org">www.gem5.org</a>), qemu and Ubuntu.</li>
+<li>HDL processor simulations, benchmarks and synthesis.</li>
+</ul>
+
+<h3>
+<a id="tutorials" class="anchor" href="#tutorials" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tutorials</h3>
+
+<ul>
+<li>Installing Lattice Mico 32 compilation toolchain.</li>
+<li>Installing ISE Webpack on Ubuntu.</li>
+<li>Compiling and running gem5 on Ubuntu.</li>
+<li>Computer Arquitecture: ARM memory hierarchy and simulation using gem5. </li>
+</ul>
+
+<pre><code>$ cd ~
+$ git clone http://github.com/ajgallegog/gem5_arm
+
+</code></pre>
+      </section>
+    </div>
+
+
+
+
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">    
+      
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.content | truncatewords:40}}
+      </div>
+      
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
